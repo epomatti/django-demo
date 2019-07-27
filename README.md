@@ -1,2 +1,5 @@
-# django-demo
-Playing with Python and Git Flow
+# Django Demo
+
+Pure Python example now.
+
+Just run `python hellowrold.py`
