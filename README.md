@@ -1,8 +1,19 @@
-# Django Demo
+# Django Demo & Git Flow
 
-Getting started:
+Project to see Django in action with Git Flow.
 
-`python hellowrold.py`
+## Setup
+
+```powershell
+python -m venv env
+env\Scripts\activate
+pip install django
+pip install djangorestframework
+```
+
+To add new app: `django-admin startapp <name_of_the_app>`
+
+Run it: `python manage.py runserver`
 
 ## Git Flow
 
@@ -87,6 +98,14 @@ git branch -d hotfix-1.2.1
 ```
 
 ## References
+
+Django
+
+https://www.django-rest-framework.org/tutorial/quickstart/
+
+https://dfpp.readthedocs.io/en/latest/chapter_01.html
+
+Git Flow
 
 https://dfpp.readthedocs.io/en/latest/chapter_01.html
 
