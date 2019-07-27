@@ -1,9 +1,8 @@
 # Django Demo
 
-Pure Python example now.
+Getting started:
 
-Just run `python hellowrold.py`
-
+`python hellowrold.py`
 
 ## Git Flow
 
