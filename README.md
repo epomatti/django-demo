@@ -7,15 +7,27 @@ Just run `python hellowrold.py`
 
 ## Git Flow
 
-Create develop branch
+Create develop branch: 
 
-`git checkout -b develop`
-`git push origin develop`
-`git branch -a`
+```shell
+git checkout -b develop
+git push origin develop
+git branch -a
+```
 
-Perform code changes, stage and commit
+Perform code changes, stage and commit:
 
-`git add .`
-`git status`
-`git commit -m "first commit"`
+```shell
+git add .
+git status
+git commit -m "first commit"
+```
 
+Merge:
+
+```shell
+git checkout develop
+git merge --no-ff purepython
+git push origin develop
+git branch -d purepython
+```
