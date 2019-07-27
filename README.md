@@ -6,7 +6,9 @@ Getting started:
 
 ## Git Flow
 
-Create develop branch: 
+### Develop Branch
+
+Create develop branch
 
 ```shell
 git checkout -b develop
@@ -14,9 +16,12 @@ git push origin develop
 git branch -a
 ```
 
-Perform code changes, stage and commit:
+### Feature Branch
+
+Create branch from develop, stage and commit:
 
 ```shell
+git checkout -b purepython develop
 git add .
 git status
 git commit -m "first commit"
@@ -30,6 +35,8 @@ git merge --no-ff purepython
 git push origin develop
 git branch -d purepython
 ```
+
+### Release Branch
 
 Change, stage, commit, merge to master, tag, and push:
 ```shell
