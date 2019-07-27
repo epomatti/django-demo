@@ -35,3 +35,7 @@ git branch -d purepython
 ## References
 
 https://dfpp.readthedocs.io/en/latest/chapter_01.html
+
+https://githowto.com/
+
+https://danielkummer.github.io/git-flow-cheatsheet/
