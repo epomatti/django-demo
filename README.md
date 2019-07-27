@@ -45,7 +45,7 @@ git commit -a -m "some change"
 git checkout master
 git merge --no-ff release-1.2
 git tag -a 1.2 -m "new release 1.2"
-git push origin master
+git push --tags origin master
 ```
 
 Merge to develop and delete release:
