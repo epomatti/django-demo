@@ -1,25 +1,34 @@
-# Django Demo & Git Flow
+# Git Flow with Django
 
-Project to see Django in action with Git Flow.
+Project to learn Django commands versioned with Git Flow.
+
+<img src=".docs/gitflow.png" width=500/>
 
 ## Setup
 
-```powershell
-python -m venv env
-env\Scripts\activate
-pip install django
-pip install djangorestframework
+```sh
+python3 -m venv env
+. env/bin/activate
+pip install -r requirements.txt
 ```
 
-To add new app: `django-admin startapp <name_of_the_app>`
+To add new app:
 
-Run it: `python manage.py runserver`
+```sh
+django-admin startapp '<name_of_the_app>'
+```
+
+Run it:
+
+```sh
+python manage.py runserver
+```
 
 ## Git Flow
 
 ### Develop Branch
 
-Create develop branch
+Create `develop` branch
 
 ```shell
 git checkout -b develop
@@ -29,7 +38,7 @@ git branch -a
 
 ### Feature Branch
 
-Create branch from develop, stage and commit:
+Create branch from `develop`, stage and commit:
 
 ```shell
 git checkout -b purepython develop
@@ -49,17 +58,17 @@ git branch -d purepython
 
 ### Release Branch
 
-Change, stage, commit, merge to master, tag, and push:
+Change, stage, commit, merge to `main`, tag, and push:
 ```shell
 git checkout -b release-1.2
 git commit -a -m "some change"
-git checkout master
+git checkout main
 git merge --no-ff release-1.2
 git tag -a 1.2 -m "new release 1.2"
-git push --tags origin master
+git push --tags origin main
 ```
 
-Merge to develop and delete release:
+Merge to `develop` and delete release:
 
 ```shell
 git checkout develop
@@ -69,25 +78,25 @@ git branch -d release-1.2
 
 ### Hotfix Branch
 
-Create hotfix branch, bump version and fix the problem
+Create `hotfix` branch, bump version and fix the problem:
 
 ```shell
-git checkout -b hotfix-1.2.1 master
+git checkout -b hotfix-1.2.1 main
 ./bump-version.sh 1.2.1
 git commit -a -m "Bumped version number to 1.2.1"
 git commit -m "Fixed severe production problem"
 ```
 
-Merge to master, tag and push (with tags)
+Merge to `main`, tag and push (with tags):
 
 ```shell
-git checkout master
+git checkout main
 git merge --no-ff hotfix-1.2.1
 git tag -a 1.2.1
-git push --tags origin master
+git push --tags origin main
 ```
 
-Merge to develop and delete branch
+Merge to `develop` and delete branch:
 
 ```shell
 git checkout develop
@@ -97,7 +106,7 @@ git push --tags origin develop
 git branch -d hotfix-1.2.1
 ```
 
-## References
+## Sources
 
 Django
 
@@ -106,8 +115,6 @@ https://www.django-rest-framework.org/tutorial/quickstart/
 https://dfpp.readthedocs.io/en/latest/chapter_01.html
 
 Git Flow
-
-https://dfpp.readthedocs.io/en/latest/chapter_01.html
 
 https://githowto.com/
 
